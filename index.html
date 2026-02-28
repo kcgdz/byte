@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <title>Byte News - Technology, Finance, Health & Science</title>
+    <meta name="title" content="Byte News - Technology, Finance, Health & Science">
+    <meta name="description" content="Your trusted source for breaking news in technology, finance, health, sports, and science. AI-powered news aggregation delivering the stories that matter.">
+    <meta name="keywords" content="technology news, finance news, health news, science news, AI news, tech updates, breaking news">
+    <meta name="author" content="Byte Media">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://your-domain.com">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://your-domain.com/">
+    <meta property="og:title" content="Byte News - Technology, Finance, Health & Science">
+    <meta property="og:description" content="Your trusted source for breaking news in technology, finance, health, sports, and science. AI-powered news aggregation.">
+    <meta property="og:image" content="https://your-domain.com/og-image.jpg">
+    <meta property="og:site_name" content="Byte News">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://your-domain.com/">
+    <meta property="twitter:title" content="Byte News - Technology, Finance, Health & Science">
+    <meta property="twitter:description" content="Your trusted source for breaking news in technology, finance, health, sports, and science.">
+    <meta property="twitter:image" content="https://your-domain.com/og-image.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.svg">
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#ff4d00">
+    <meta name="msapplication-TileColor" content="#ff4d00">
+
+    <!-- Fonts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NewsMediaOrganization",
+      "name": "Byte News",
+      "url": "https://your-domain.com",
+      "logo": "https://your-domain.com/logo.png",
+      "description": "Your trusted source for breaking news in technology, finance, health, sports, and science."
+    }
+    </script>
+
+    <style>
+        :root {
+            --bg: #ffffff;
+            --fg: #0a0a0a;
+            --accent: #ff4d00;
+            --border: #e5e5e5;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--fg);
+            -webkit-font-smoothing: antialiased;
+        }
+        .font-serif { font-family: 'Instrument Serif', serif; }
+        .font-mono { font-family: 'JetBrains Mono', monospace; }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 5px; }
+        ::-webkit-scrollbar-track { background: var(--bg); }
+        ::-webkit-scrollbar-thumb { background: var(--fg); }
+
+        .border-base { border: 1px solid var(--border); }
+        .border-b-base { border-bottom: 1px solid var(--border); }
+
+        .hover-lift {
+            transition: transform 0.2s cubic-bezier(0.2, 0, 0, 1);
+        }
+        .hover-lift:hover {
+            transform: translateY(-2px);
+        }
+
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-slide-up { animation: slideUp 0.4s ease-out forwards; }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://esm.sh/@google/genai@^1.42.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>

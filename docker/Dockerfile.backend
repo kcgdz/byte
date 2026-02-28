@@ -1,0 +1,41 @@
+# Backend Dockerfile
+FROM node:20-alpine AS builder
+
+WORKDIR /app
+
+# Install dependencies
+COPY package*.json ./
+RUN npm ci
+
+# Copy source
+COPY tsconfig.json ./
+COPY tsconfig.backend.json ./
+COPY src/backend ./src/backend
+COPY src/shared ./src/shared
+COPY scripts ./scripts
+
+# Build
+RUN npm run build:backend
+
+# Production image
+FROM node:20-alpine
+
+WORKDIR /app
+
+# Copy package files and install production deps only
+COPY package*.json ./
+RUN npm ci --production
+
+# Copy built files
+COPY --from=builder /app/dist ./dist
+COPY --from=builder /app/scripts ./scripts
+
+# Create non-root user
+RUN addgroup -g 1001 -S nodejs && \
+    adduser -S nodejs -u 1001
+USER nodejs
+
+EXPOSE 3001
+
+# Default: run API server
+CMD ["node", "dist/backend/api/index.js"]
